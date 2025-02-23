@@ -22,7 +22,7 @@ export default function Carousel() {
     secondaryButtonText,
   } = slides[currentSlide];
   return (
-    <div className="relative w-full h-[500px] sm:h-[600px] overflow-hidden">
+    <div className="relative mt-[30px] w-full h-[500px] sm:h-[600px] overflow-hidden">
       {/* Slide Image */}
       <div className="relative  w-full h-full">
         <Image
