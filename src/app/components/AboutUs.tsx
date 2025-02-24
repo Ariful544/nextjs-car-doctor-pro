@@ -30,12 +30,12 @@ export default function AboutUs() {
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which do not look even slightly
-          believable.{" "}
+          believable.
         </p>
         <p className="text-[#737373] text-base">
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which do not look even slightly
-          believable.{" "}
+          believable.
         </p>
         <Button className="bg-[#FF3811] md:w-[160px] w-[120px] md:h-[50px] h-[40px] md:text-base  text-xs hover:bg-[#fc3a37] text-white">
           Get More Info
