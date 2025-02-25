@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 export default function AboutUs() {
   return (
-    <div className=" relative grid md:grid-cols-2 grid-cols-1 gap-12 min-h-[500px] mt-[130px]">
+    <div className=" relative grid md:grid-cols-2 grid-cols-1 gap-12 min-h-[500px] md:mt-[130px] mt-[60px]">
       <div className="relative ">
         <Image
           alt="person"

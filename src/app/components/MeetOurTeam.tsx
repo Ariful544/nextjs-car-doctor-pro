@@ -4,7 +4,7 @@ import TeamMemberSlide from "./ui/TeamMemberSlide";
 
 export default function MeetOurTeam() {
   return (
-    <div className="min-h-screen mt-[130px]">
+    <div className="md:min-h-screen min-h-[600px] md:mt-[130px] mt-[60px]">
       <Heading
         title="Team"
         subtitle="Meet Our Team"

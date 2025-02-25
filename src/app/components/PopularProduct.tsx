@@ -5,7 +5,7 @@ import Heading from "./ui/Heading";
 
 export default function PopularProduct() {
   return (
-    <div className="min-h-screen mt-[130px]">
+    <div className="min-h-screen md:mt-[130px] mt-[60px]">
       <Heading
         title="Popular Products"
         subtitle="Browse Our Products"

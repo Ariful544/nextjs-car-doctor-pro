@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="h-[300px] px-20 rounded-lg grid md:grid-cols-3 grid-cols-1 bg-[#151515] mt-[130px]">
+    <div className="h-[300px] px-20 rounded-lg grid md:grid-cols-3 grid-cols-1 bg-[#151515] md:mt-[130px] mt-[60px]">
         {/* calender */}
       <div className="flex items-center gap-3 text-white">
         <div>

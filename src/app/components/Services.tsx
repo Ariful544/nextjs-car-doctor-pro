@@ -5,7 +5,7 @@ import Heading from "./ui/Heading";
 
 export default function Services() {
   return (
-    <div className="min-h-screen mt-[130px]">
+    <div className="min-h-screen md:mt-[130px] mt-[60px]">
       <Heading
         title="Service"
         subtitle="Our Service Area"

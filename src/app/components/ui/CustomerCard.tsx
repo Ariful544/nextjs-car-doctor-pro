@@ -12,9 +12,9 @@ import "swiper/css/pagination";
 // import required modules
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import TeamSlide from "./TeamSlide";
+import CustomerSlide from "./CustomerSlide";
 
-export default function TeamMemberSlide() {
+export default function CustomerCard() {
   // Reference for swiper instance
   const swiperRef = useRef<SwiperClass | null>(null);
 
@@ -42,7 +42,7 @@ export default function TeamMemberSlide() {
       </button>
       <button
         onClick={handleNext}
-        className="absolute z-10 top-1/2 right-2 bg-[#FF3811] transform -translate-y-1/2 md:p-4 p-2 rounded-full shadow hover:bg-[#FF3811]"
+        className="absolute z-10 top-1/2 right-0 bg-[#FF3811] transform -translate-y-1/2 md:p-4 p-2 rounded-full shadow hover:bg-[#FF3811]"
       >
         <ArrowRight size={20} className="text-white" />
       </button>
@@ -52,7 +52,7 @@ export default function TeamMemberSlide() {
           // Set the swiper instance to the ref once it is ready
           swiperRef.current = swiper;
         }}
-        spaceBetween={30}
+        spaceBetween={10}
         freeMode={true}
         modules={[FreeMode, Navigation, Pagination]}
         className="mySwiper"
@@ -60,28 +60,20 @@ export default function TeamMemberSlide() {
           0: {
             slidesPerView: 1, // Mobile
           },
-          768: {
+          1024: {
             slidesPerView: 2, // Tablet and larger
           },
-          1024: {
-            slidesPerView: 3, // Tablet and larger
-          },
+         
         }}
       >
         <SwiperSlide>
-          <TeamSlide img={"/assets/images/team/1.jpg"} title="Car Engine Plug" subtitle="Engine Expert" href="#"/>
+          <CustomerSlide img={"https://img.icons8.com/?size=100&id=x0qTmzjcFRhW&format=png&color=000000"} name="MD Ariful Islam" ocupation="Worker" comments="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. " rating={5}/>
         </SwiperSlide>
         <SwiperSlide>
-          <TeamSlide img={"/assets/images/team/2.jpg"} title="Car Engine Plug" subtitle="Engine Expert" href="#"/>
+          <CustomerSlide img={"https://img.icons8.com/?size=100&id=x0qTmzjcFRhW&format=png&color=000000"} name="Salman Khan" ocupation="Businessman" comments="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. " rating={4}/>
         </SwiperSlide>
         <SwiperSlide>
-          <TeamSlide img={"/assets/images/team/3.jpg"} title="Car Engine Plug" subtitle="Engine Expert" href="#"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <TeamSlide img={"/assets/images/team/3.jpg"} title="Car Engine Plug" subtitle="Engine Expert" href="#"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <TeamSlide img={"/assets/images/team/3.jpg"} title="Car Engine Plug" subtitle="Engine Expert" href="#"/>
+          <CustomerSlide img={"https://img.icons8.com/?size=100&id=x0qTmzjcFRhW&format=png&color=000000"} name="Anas bin Arif" ocupation="Enterpeuner" comments="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. " rating={3}/>
         </SwiperSlide>
       </Swiper>
     </div>
