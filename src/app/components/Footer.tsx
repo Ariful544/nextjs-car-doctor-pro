@@ -7,7 +7,7 @@ import { IoLogoInstagram } from "react-icons/io";
 export default function Footer() {
   return (
     <div className="min-h-[400px] md:mt-[130px] px-4 md:px-0  mt-[60px] bg-[#151515]">
-      <div className="max-w-screen-xl h-full pt-32 place-items-center mx-auto grid md:grid-cols-4 grid-cols-2">
+      <div className="max-w-screen-xl h-full pt-32 place-items-center content-center mx-auto grid md:grid-cols-4 grid-cols-2">
         <div className="space-y-3">
           <Image
             src="/assets/logo.svg"
@@ -18,10 +18,10 @@ export default function Footer() {
           />
           <p className="text-[#adadad]">Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
           <div className="flex items-center gap-3">
-            <p className="w-10 h-10 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><FaGoogle /></p>
-            <p className="w-10 h-10 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><FaTwitter /></p>
-            <p className="w-10 h-10 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><IoLogoInstagram /></p>
-            <p className="w-10 h-10 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><FaLinkedin /></p>
+            <p className="w-8 h-8 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><FaGoogle /></p>
+            <p className="w-8 h-8 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><FaTwitter /></p>
+            <p className="w-8 h-8 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><IoLogoInstagram /></p>
+            <p className="w-8 h-8 cursor-pointer flex justify-center items-center rounded-full bg-gray-600 text-white"><FaLinkedin /></p>
           </div>
         </div>
         <div className="text-white">
