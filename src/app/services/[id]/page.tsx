@@ -39,7 +39,7 @@ export default function ServiceDetails() {
             height={400}
             className="w-full h-[400px] object-cover rounded-lg "
           />
-          <h2 className="text-4xl text-[#151515] font-bold">
+          <h2 className="md:text-4xl text-2xl text-[#151515] font-bold">
             Unique Car Engine Service
           </h2>
           <p className="text-[#737373]">
@@ -84,7 +84,7 @@ export default function ServiceDetails() {
             need to be sure there is not anything embarrassing hidden in the
             middle of text.{" "}
           </p>
-          <h3 className="text-4xl text-[#151515] font-bold">
+          <h3 className="md:text-4xl text-2xl text-[#151515] font-bold">
             3 Simple Steps to Process
           </h3>
           <p className="text-[#737373]">
@@ -182,12 +182,12 @@ export default function ServiceDetails() {
                 off
               </p>
               <div className="w-[170px] h-14 absolute flex justify-center items-center left-1/2 -bottom-6 rounded-lg -translate-x-1/2 bg-[#FF3811]">
-                <p className="text-white font-semibold text-lg">Get A Quote</p>
+                <button className="text-white font-semibold text-lg">Get A Quote</button>
               </div>
             </div>
           </div>
           <div>
-            <p className="text-[#151515] text-4xl font-bold my-[30px]">Price $250.00</p>
+            <p className="text-[#151515] md:text-4xl md:text-left text-center text-2xl font-bold my-[30px]">Price $250.00</p>
           </div>
           <div className="w-full h-[56px] bg-[#FF3811] flex justify-center items-center rounded-lg">
               <button type="button" className="text-white font-bold text-lg">Proceed Checkout</button>
