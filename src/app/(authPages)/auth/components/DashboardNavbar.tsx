@@ -4,7 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const navLinks = (
+export default function DashboardNavbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const user = true;
+  const handleToggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const navLinks = (
     <>
       <li>
         <Link
@@ -30,21 +36,26 @@ const navLinks = (
           Manage Inventory
         </Link>
       </li>
-      <li>
-        <Link
-          href="/"
-          className="font-medium text-gray-700 transition-colors hover:text-black"
-        >
-          Login
-        </Link>
-      </li>
+      {user ? (
+        <>
+          {/* Icons */}
+          <div className="flex items-center gap-4">
+            <ShoppingCart className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+            <Search className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+          </div>
+        </>
+      ) : (
+        <li>
+          <Link
+            href="/"
+            className="font-medium text-gray-700 transition-colors hover:text-black"
+          >
+            Login
+          </Link>
+        </li>
+      )}
     </>
   );
-export default function DashboardNavbar() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-    const handleToggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-      };
   return (
     <nav className=" bg-white">
       <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-4 md:px-8">
