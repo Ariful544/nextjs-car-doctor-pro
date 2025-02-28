@@ -1,8 +1,11 @@
 import { cn } from "@/lib/utils";
-import { Menu, Search, ShoppingCart } from "lucide-react";
+import { Menu, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { CiHeart } from "react-icons/ci";
+import { FaRegUser } from "react-icons/fa";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 
 export default function DashboardNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -40,8 +43,10 @@ export default function DashboardNavbar() {
         <>
           {/* Icons */}
           <div className="flex items-center gap-4">
-            <ShoppingCart className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+            <HiOutlineShoppingBag className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
             <Search className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+            <CiHeart className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+            <FaRegUser className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
           </div>
         </>
       ) : (
@@ -123,8 +128,10 @@ export default function DashboardNavbar() {
 
           {/* Icons */}
           <div className="flex items-center gap-4">
-            <ShoppingCart className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+            <HiOutlineShoppingBag className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
             <Search className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+            <CiHeart className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
+            <FaRegUser className="h-5 w-5 cursor-pointer text-gray-700 hover:text-black" />
           </div>
         </div>
       </div>

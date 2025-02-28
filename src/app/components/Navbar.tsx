@@ -62,7 +62,7 @@ export default function Navbar() {
   const handleToggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-  if (!pathname.includes("auth") && !pathname.includes("cartDetails")) {
+  if (!pathname.includes("auth") && !pathname.includes("cartDetails") && !pathname.includes("manageAllOrders")) {
     return (
       <nav className=" bg-white">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-4 md:px-8">

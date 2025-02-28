@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { ChangeStatus } from "./ChangeStatus";
 
-export default function CardCart() {
+export default function ManageOrdersCard() {
   return (
     <div className="w-full flex flex-col sm:flex-row justify-between gap-4 sm:gap-6 items-center p-4 sm:p-6 border rounded-lg shadow">
       {/* Left Section */}
@@ -33,9 +33,7 @@ export default function CardCart() {
         <p className="font-semibold text-lg sm:text-xl text-[#444444]">
           22-10-2022
         </p>
-        <Button size={"lg"} className="bg-[#FF3811] hover:bg-[#f84636] text-lg">
-          Pending
-        </Button>
+        <ChangeStatus />
       </div>
     </div>
   );
