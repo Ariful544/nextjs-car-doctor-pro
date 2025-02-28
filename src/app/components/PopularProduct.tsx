@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import ProductCard from "./ui/ProductCard";
 import Heading from "./ui/Heading";
 
-export default function PopularProduct() {
+export default async function PopularProduct() {
   return (
     <div className="min-h-screen md:mt-[130px] mt-[60px]">
       <Heading

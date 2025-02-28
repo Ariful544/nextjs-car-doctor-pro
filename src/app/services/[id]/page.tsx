@@ -6,8 +6,26 @@ import VideoThumbnail from "../components/VideoThumbnail";
 import ServicesLinks from "../components/ServicesLinks";
 import { GrNotes } from "react-icons/gr";
 import { ArrowRight } from "lucide-react";
+import dbConnect from "@/lib/dbConnect";
+import { ObjectId } from "mongodb";
 
-export default function ServiceDetails() {
+interface ServiceData {
+  _id: string; // Convert MongoDB ObjectId to string
+  title: string;
+  description: string;
+  img: string;
+  price: number;
+  facility: [];
+}
+
+export default async function ServiceDetails({params}:{params:{id:string}}) {
+
+  const servicesCollection =  dbConnect({collectionName: "services"});
+  const data = await servicesCollection.findOne<ServiceData>({_id: new ObjectId(params.id)})
+  
+  if (!data) {
+    throw new Error("Service not found");
+  }
   return (
     <>
       <div className="relative">
@@ -33,48 +51,22 @@ export default function ServiceDetails() {
       <div className="grid grid-cols-12 gap-6 min-h-screen  w-full md:mt-[130px] mt-[60px]">
         <div className="md:col-span-9 col-span-12 space-y-10">
           <Image
-            src={"/assets/images/services/1.jpg"}
+            src={data.img}
             alt="service"
             width={850}
             height={400}
             className="w-full h-[400px] object-cover rounded-lg "
           />
           <h2 className="md:text-4xl text-2xl text-[#151515] font-bold">
-            Unique Car Engine Service
+           {data.title}
           </h2>
           <p className="text-[#737373]">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which do not look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there is not anything embarrassing hidden in the
-            middle of text.{" "}
+           {data.description}
           </p>
           <div className="grid gap-6 md:grid-cols-2 grid-cols-1">
-            <ServiceCard
-              title="Instant Car Services"
-              para={
-                "It uses a dictionary of over 200 Latin words, combined with a model sentence structures."
-              }
-            />
-            <ServiceCard
-              title="24/7 Quality Service"
-              para={
-                "It uses a dictionary of over 200 Latin words, combined with a model sentence structures."
-              }
-            />
-            <ServiceCard
-              title="Easy Customer Service"
-              para={
-                "It uses a dictionary of over 200 Latin words, combined with a model sentence structures."
-              }
-            />
-            <ServiceCard
-              title="Quality Cost Service"
-              para={
-                "It uses a dictionary of over 200 Latin words, combined with a model sentence structures."
-              }
-            />
+            {
+              data.facility.map((services,index)=> <ServiceCard key={index} services={services}/>)
+            }
           </div>
           <p className="text-[#737373]">
             There are many variations of passages of Lorem Ipsum available, but
@@ -187,7 +179,7 @@ export default function ServiceDetails() {
             </div>
           </div>
           <div>
-            <p className="text-[#151515] md:text-4xl md:text-left text-center text-2xl font-bold my-[30px]">Price $250.00</p>
+            <p className="text-[#151515] md:text-4xl md:text-left text-center text-2xl font-bold my-[30px]">Price ${data.price}</p>
           </div>
           <div className="w-full h-[56px] bg-[#FF3811] flex justify-center items-center rounded-lg">
               <button type="button" className="text-white font-bold text-lg">Proceed Checkout</button>
